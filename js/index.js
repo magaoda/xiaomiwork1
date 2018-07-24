@@ -60,11 +60,13 @@ window.onload=function(){
 			sonCon[i].style.background="#fff";
             sonCon[i].style.boxShadow="0 7px 6px rgba(0,0,0,0.2)";
             sonCon[i].style.border="1px solid #E0E0E0";
+            sonCon[i].style.zIndex=99;
 		}
 		son[i].onmouseleave = function () {
                 sonCon[i].style.display = "none";
             	sonCon[i].style.boxShadow="none";
             	sonCon[i].style.border="none";
+            sonCon[i].style.zIndex="none";
             }
 	}
 
@@ -90,6 +92,7 @@ window.onload=function(){
 
         }
     }
+
     let goods=document.getElementsByClassName("goods")[0];
 	xm(goods);
     let intelligence=document.getElementsByClassName("intelligence")[0];
@@ -100,4 +103,47 @@ window.onload=function(){
     xm(peijian);
     let zhoubian=document.getElementsByClassName("zhoubian")[0];
     xm(zhoubian);
+
+    let bigCon=document.getElementsByClassName("bigCon")[0];
+    let wraper=bigCon.getElementsByClassName("wraper")[0];
+    let zhuan=wraper.getElementsByClassName("zhuan")[0];
+    let a=zhuan.getElementsByTagName("a");
+    let left=bigCon.getElementsByClassName("jiantou1")[0];
+    let right=bigCon.getElementsByClassName("jiantou2")[0];
+    console.log(a);
+
+    let t=setInterval(move,1000);
+    let num=0;
+    function move() {
+            num++;
+            if(num==a.length){
+                num=0;
+            }
+            for(let i=0;i<a.length;i++){
+                a[i].style.zIndex=5;
+            }
+            a[num].style.zIndex=10;
+    }
+    bigCon.onmouseenter=function () {
+        clearInterval(t);
+    }
+    bigCon.onmouseleave=function () {
+       t=setInterval(move,1000);
+    }
+    right.onclick=function () {
+        move();
+    }
+    function move1() {
+        num--;
+        if(num<0){
+            num=a.length-1;
+        }
+        for(let j=0;j<a.length;j++){
+            a[j].style.zIndex=5;
+        }
+        a[num].style.zIndex=10;
+    }
+    left.onclick=function () {
+        move1();
+    }
 }
