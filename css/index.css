@@ -831,15 +831,23 @@ img{
     float: left;
 }
 .shangou .more{
-    width: 72px;
-    height: 58px;
+    width: 70px;
+    height: 25px;
     float: right;
     transition: all 1s;
+    margin-top: 15px;
 }
-.shangou .more button{
-    width: 33px;
+.shangou .more .btn2{
+    width: 35px;
     height: 25px;
-    margin-top: 13px;
+    background-color: #fff;
+    border: 1px solid #b0b0b0;
+    text-align: center;
+    box-sizing: border-box;
+    cursor: pointer;
+    float: left;
+    font-size: 18px;
+    color: #B0B3BE;
 }
 /*.shangou .more .more1{*/
     /*margin: 17px 0 17px;*/
@@ -912,7 +920,7 @@ img{
     font-size: 22px;
     margin: 0 33px 0;
 }
-.shangou .con .box .box1 .box2 .son{
+.shangou .con .box .box1 .box2 .son2{
     float: left;
     width: 46px;
     height: 46px;
@@ -3148,6 +3156,8 @@ img{
     transition: all 0.4s;
     position: relative;
     float: left;
+    border-top: 1px solid #2196f3;
+    color: #2196f3;
     overflow: hidden;
 }
 .nr .con .boxs{
@@ -3174,15 +3184,15 @@ img{
     font-weight: 700;
     color: #fff;
 }
-.nr .con .box  .end{
+.nr .con .bo:hover .end{
     display: block;
     width: 20px;
     height: 48px;
     position: absolute;
-    right: 0;
-    top: 210px;
-    left: 0;
-    margin: 0 auto;
+    left: 280px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
     background-color: rgba(0, 0, 0, 0.2);
     line-height: 48px;
     font-size: 20px;
@@ -3200,6 +3210,7 @@ img{
 .nr .con .bo:hover .end{
     right: 0;
 }
+
 .nr .con .bo:nth-child(1){
     border-top: 1px solid #ffac13;
     color: #ffac13;
@@ -3212,10 +3223,10 @@ img{
     border-top: 1px solid #e53935;
     color: #e53935;
 }
-.nr .con .bo:nth-child(4){
+.nr .con .bo:last-child{
     margin-right: 0;
 }
-.nr .con .box:nth-child(4){
+.nr .con .box{
     border-top: 1px solid #2196f3;
     color: #2196f3;
 }
