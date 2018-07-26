@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>小米</title>
 	<script src="js/index.js"></script>
+	<script src="js/animate.js"></script>
 	<link rel="stylesheet" href="css/index.css">
 	<link rel="stylesheet" type="text/css" href="css/iconfont.css">
 </head>
@@ -2196,13 +2197,13 @@
 			</div></div>
 		<div class="jiantou1"></div>
 		<div class="jiantou2"></div>
-		<div class="btns">
-			<div class="son"><a href=""></a></div>
-			<div class="son"><a href=""></a></div>
-			<div class="son"><a href=""></a></div>
-			<div class="son"><a href=""></a></div>
-			<div class="son"><a href=""></a></div>
-		</div>		
+		<ul class="btns">
+			<li	class="hot"><a href="javascript:;"></a></li>
+			<li><a href="javascript:;"></a></li>
+			<li><a href="javascript:;"></a></li>
+			<li><a href="javascript:;"></a></li>
+			<li><a href="javascript:;"></a></li>
+		</ul>
 	</div>
 	<div class="smallCon">
 		<div class="Conleft">
@@ -2233,49 +2234,63 @@
 	</div>
 	<div class="shangou">
 		<div class="title6">
-				<h2 class="title">小米闪购</h2>
-				<div class="more">
-					<div class="more1">
-						<img src="img/more1.jpg" width="72" height="24">
-					</div>
+			<h2 class="title">小米闪购</h2>
+			<div class="more">
+				<div class="more1">
+					<button class="btn2"><</button>
+					<button class="btn2">></button>
 				</div>
+			</div>
 		</div>
 		<div class="con">
-			<div class="box">
-				<div class="box1">
-					<h3>18:00场</h3>
-					<img src="img/shangou.png" width="35" height="53" class="imgbox">
-					<h5>距离开始还有</h5>
-					<div class="box2">
-						<div class="son">01</div>
-						<div class="son1">:</div>
-						<div class="son">32</div>
-						<div class="son1">:</div>
-						<div class="son">37</div>
+			<div class="left">
+				<div class="box">
+					<div class="box1">
+						<h3>18:00场</h3>
+						<img src="img/shangou.png" width="35" height="53" class="imgbox">
+						<h5>距离开始还有</h5>
+						<div class="box2">
+							<div class="son">01</div>
+							<div class="son1">:</div>
+							<div class="son">32</div>
+							<div class="son1">:</div>
+							<div class="son">37</div>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="box">
-				<a href="">
+			<div class="right">
+				<div class="right1">
+					<a href="">
 					<img src="img/box11.jpg" width="234" height="339">
-				</a>
-			</div>
-			<div class="box">
-				<a href="">
+					</a>
+					<a href="">
 					<img src="img/box12.jpg" width="234" height="339">
-				</a>
-			</div>
-			<div class="box">
-				<a href="">
+					</a>
+					<a href="">
 					<img src="img/box13.jpg" width="234" height="339">
-				</a>
-			</div>
-			<div class="box">
-				<a href="">
+					</a>
+					<a href="">
 					<img src="img/box14.jpg" width="234" height="339">
-				</a>
+					</a>
+					<a href="">
+					<img src="img/box14.jpg" width="234" height="339">
+					</a>
+					<a href="">
+					<img src="img/box13.jpg" width="234" height="339">
+					</a>
+					<a href="">
+					<img src="img/box13.jpg" width="234" height="339">
+					</a>
+					<a href="">
+					<img src="img/box12.jpg" width="234" height="339">
+					</a>
+					<a href="">
+					<img src="img/box12.jpg" width="234" height="339">
+					</a>
+				</div>
 			</div>
-		</div>			
+		</div>
 	</div>
 	<div class="art">
 		<a href="">
@@ -4556,79 +4571,268 @@
 				</div>
 			</div>	
 		</div>
-		<div class="neirong">
-			<div class="title8">
-					<h2 class="title">内容</h2>
-			</div>
+		<!--<div class="neirong">-->
+			<!--<div class="title8">-->
+					<!--<h2 class="title">内容</h2>-->
+			<!--</div>-->
+			<!--<div class="con">-->
+				<!--<div class="box box1">-->
+					<!--<div class="list" >-->
+						<!--<div class="con1">图书</div>-->
+						<!--<a href="http://www.duokan.com/book/120800" >-->
+							<!--<h3>哈利·波特与被诅咒的孩子</h3>-->
+							<!--<h4>“哈利·波特”第八个故事中文版震撼来袭！特别彩排版剧本！</h4>-->
+							<!--<h5>29.37元</h5>-->
+							<!--<img src="img/neirong1.jpg" width="216" height="154" class="imgbox">-->
+						<!--</a>-->
+						<!--<div class="jiantou1">-->
+							<!--<span class="iconfont icon-jiantou21"></span>-->
+						<!--</div>-->
+						<!--<div class="jiantou2">-->
+							<!--<span class="iconfont icon-jiantou22"></span>-->
+						<!--</div>-->
+						<!--<div class="btns1">-->
+							<!--<div class="son son1"></div>-->
+							<!--<div class="son son2"><a href=""></a></div>-->
+							<!--<div class="son son2"><a href=""></a></div>-->
+						<!--</div>-->
+					<!--</div>-->
+					<!--<div class="list" >-->
+						<!--<div class="con1">图书</div>-->
+						<!--<a href="http://www.duokan.com/book/120800">-->
+							<!--<h3>哈利·波特与被诅咒的孩子</h3>-->
+							<!--<h4>“哈利·波特”第八个故事中文版震撼来袭！特别彩排版剧本！</h4>-->
+							<!--<h5>29.37元</h5>-->
+							<!--<img src="img/neirong2.jpg" width="216" height="154" class="imgbox">-->
+						<!--</a>-->
+						<!--<div class="jiantou1">-->
+							<!--<span class="iconfont icon-jiantou21"></span>-->
+						<!--</div>-->
+						<!--<div class="jiantou2">-->
+							<!--<span class="iconfont icon-jiantou22"></span>-->
+						<!--</div>-->
+						<!--<div class="btns1">-->
+							<!--<div class="son son1"></div>-->
+							<!--<div class="son son2"><a href=""></a></div>-->
+							<!--<div class="son son2"><a href=""></a></div>-->
+						<!--</div>-->
+					<!--</div>-->
+					<!--<div class="list" >-->
+						<!--<div class="con1">图书</div>-->
+						<!--<a href="http://www.duokan.com/book/120800">-->
+							<!--<h3>哈利·波特与被诅咒的孩子</h3>-->
+							<!--<h4>“哈利·波特”第八个故事中文版震撼来袭！特别彩排版剧本！</h4>-->
+							<!--<h5>29.37元</h5>-->
+							<!--<img src="img/neirong3.jpg" width="216" height="154" class="imgbox">-->
+						<!--</a>-->
+						<!--<div class="jiantou1">-->
+							<!--<span class="iconfont icon-jiantou21"></span>-->
+						<!--</div>-->
+						<!--<div class="jiantou2">-->
+							<!--<span class="iconfont icon-jiantou22"></span>-->
+						<!--</div>-->
+						<!--<div class="btns1">-->
+							<!--<div class="son son1"></div>-->
+							<!--<div class="son son2"><a href=""></a></div>-->
+							<!--<div class="son son2"><a href=""></a></div>-->
+						<!--</div>-->
+					<!--</div>-->
+				<!--</div>-->
+				<!--<div class="box box2">-->
+					<!--<div class="jiantou1"><span class="iconfont icon-jiantou21"></span></div>-->
+					<!--<div class="jiantou2"><span class="iconfont icon-jiantou22"></span></div>-->
+					<!--<div class="con1">MIUI&nbsp主题</div>-->
+						<!--<a href="http://zhuti.xiaomi.com/detail/8525e4f5-5b92-4d45-aadb-2b055ca6a3b0">-->
+							<!--<h3>黑豹-迅猛来袭</h3>-->
+							<!--<h4>小米主题与迪士尼首度合作，打造精品迪士尼系列主题</h4>-->
+							<!--<h5>8米币</h5>-->
+							<!--<img src="img/neirong2.jpg" width="216" height="154" class="imgbox">-->
+						<!--</a>-->
+					<!--<div class="btns1">-->
+						<!--<div class="son son1"></div>-->
+						<!--<div class="son son2"><a href=""></a></div>-->
+						<!--<div class="son son2"><a href=""></a></div>-->
+						<!--<div class="son son2"><a href=""></a></div>-->
+					<!--</div>-->
+				<!--</div>-->
+				<!--<div class="box box3">-->
+					<!--<div class="jiantou1"><span class="iconfont icon-jiantou21"></span></div>-->
+					<!--<div class="jiantou2"><span class="iconfont icon-jiantou22"></span></div>-->
+					<!--<div class="con1">游戏</div>-->
+					<!--<a href="http://js2.xoyo.com/?channel=bd">-->
+						<!--<h3>剑侠世界2</h3>-->
+						<!--<h4>潮流武侠，炫动江湖！</h4>-->
+						<!--<img src="img/neirong3.jpg" width="216" height="154" class="imgbox1">-->
+					<!--</a>-->
+					<!--<div class="btns1">-->
+						<!--<div class="son son1"></div>-->
+						<!--<div class="son son2"><a href=""></a></div>-->
+						<!--<div class="son son2"><a href=""></a></div>-->
+						<!--<div class="son son2"><a href=""></a></div>-->
+					<!--</div>-->
+				<!--</div>-->
+				<!--<div class="box box4">-->
+					<!--<div class="jiantou1"><span class="iconfont icon-jiantou21"></span></div>-->
+					<!--<div class="jiantou2"><span class="iconfont icon-jiantou22"></span></div>-->
+					<!--<div class="con1">应用</div>-->
+					<!--<a href="http://app.mi.com/subject/169216">-->
+						<!--<h3>2017金米奖</h3>-->
+						<!--<h4>最优秀的应用和游戏</h4>-->
+						<!--<img src="img/neirong4.jpg" width="216" height="154" class="imgbox1">-->
+					<!--</a>-->
+					<!--<div class="btns1">-->
+						<!--<div class="son son1"></div>-->
+						<!--<div class="son son2"><a href=""></a></div>-->
+						<!--<div class="son son2"><a href=""></a></div>-->
+						<!--<div class="son son2"><a href=""></a></div>-->
+					<!--</div>-->
+				<!--</div>-->
+			<!--</div>-->
+		<!--</div>-->
+		<div class="nr">
+			<div class="title">内容</div>
 			<div class="con">
-				<div class="box box1">
-					<div class="con1">图书</div>
-					<a href="http://www.duokan.com/book/120800">
-						<h3>哈利·波特与被诅咒的孩子</h3>
-						<h4>“哈利·波特”第八个故事中文版震撼来袭！特别彩排版剧本！</h4>
+				<div class="bo">
+					<h2>图书</h2>
+					<div class="boxs" style="left:0px;">
+						<h3><a href="">哈利·波特与被诅咒的孩子</a></h3>
+						<h4><a href="">“哈利·波特”第八个故事中文版震撼来袭！特别彩排版剧本！</a></h4>
 						<h5>29.37元</h5>
-						<img src="img/neirong1.jpg" width="216" height="154" class="imgbox">
-					</a>
-					<div class="jiantou1">
-						<span class="iconfont icon-jiantou21"></span>
+						<a href="" class="imgbox"><img src="img/neirong1.jpg" alt="" width="216" height="154"></a>
 					</div>
-					<div class="jiantou2">
-						<span class="iconfont icon-jiantou22"></span>
+					<div class="boxs">
+						<h3><a href="">好吗好的</a></h3>
+						<h4><a href="">畅销作家大冰2016年新书！讲给你听，好吗好的！</a></h4>
+						<h5>17.99元</h5>
+						<a href="" class="imgbox"><img src="img/neirong3.jpg" alt="" width="216" height="154"></a>
 					</div>
-					<div class="btns1">
-						<div class="son son1"></div>
-						<div class="son son2"><a href=""></a></div>
-						<div class="son son2"><a href=""></a></div>
-					</div>		
+					<div class="boxs">
+						<h3><a href="">剑侠世界2</a></h3>
+						<h4><a href="">潮流武侠，炫动江湖！</a></h4>
+						<h5></h5>
+						<a href="" class="imgbox"><img src="img/neirong4.jpg" alt="" width="216" height="154"></a>
+					</div>
+
+					<a href="javascript:;" class="pre" style="z-index: 30;"><</a>
+					<a href="javascript:;" class="end" style="z-index: 30;">></a>
+					<div class="btns" style="z-index: 30;">
+						<a href="javascript:;" class="son  son1"></a>
+						<a href="javascript:;" class="son"></a>
+						<a href="javascript:;" class="son"></a>
+					</div>
+
 				</div>
-				<div class="box box2">
-					<div class="jiantou1"><span class="iconfont icon-jiantou21"></span></div>
-					<div class="jiantou2"><span class="iconfont icon-jiantou22"></span></div>
-					<div class="con1">MIUI&nbsp主题</div>
-						<a href="http://zhuti.xiaomi.com/detail/8525e4f5-5b92-4d45-aadb-2b055ca6a3b0">
-							<h3>黑豹-迅猛来袭</h3>
-							<h4>小米主题与迪士尼首度合作，打造精品迪士尼系列主题</h4>
-							<h5>8米币</h5>
-							<img src="img/neirong2.jpg" width="216" height="154" class="imgbox">
-						</a>
-					<div class="btns1">
-						<div class="son son1"></div>
-						<div class="son son2"><a href=""></a></div>
-						<div class="son son2"><a href=""></a></div>
-						<div class="son son2"><a href=""></a></div>
+				<div class="bo">
+					<h2>MIUI 主题</h2>
+					<div class="boxs" style="left:0px;">
+						<h3><a href="">复仇者联盟3</a></h3>
+						<h4><a href="">漫威电影宇宙10周年，定制主题上线！漫威粉丝不容错过！</a></h4>
+						<h5>5.2米币</h5>
+						<a href="" class="imgbox"><img src="img/neirong3.jpg" alt="" width="216" height="154"></a>
 					</div>
+					<div class="boxs">
+						<h3><a href="">包宝宝养成记</a></h3>
+						<h4><a href="">包宝宝定制主题Q萌上线！快来领取萌萌包宝宝吧！</a></h4>
+						<h5>4.2米币</h5>
+						<a href="" class="imgbox"><img src="img/neirong1.jpg" alt="" width="216" height="154"></a>
+					</div>
+					<div class="boxs">
+						<h3><a href="">超人总动员2</a></h3>
+						<h4><a href="">超人家族强势回归！炫酷有趣的动画锁屏让你每次都惊喜不断~</a></h4>
+						<h5>8.8米币</h5>
+						<a href="" class="imgbox"><img src="img/neirong4.jpg" alt="" width="216" height="154"></a>
+					</div>
+					<div class="boxs">
+						<h3><a href="">2017金米奖</a></h3>
+						<h4><a href="">最优秀的应用和游戏</a></h4>
+						<h5></h5>
+						<a href="" class="imgbox"><img src="img/neirong2.jpg" alt="" width="216" height="154"></a>
+					</div>
+
+					<a href="javascript:;" class="pre" style="z-index: 30;"><</a>
+					<a href="javascript:;" class="end" style="z-index: 30;">></a>
+					<div class="btns" style="z-index: 30;">
+						<a href="javascript:;" class="son  son1"></a>
+						<a href="javascript:;" class="son"></a>
+						<a href="javascript:;" class="son"></a>
+						<a href="javascript:;" class="son"></a>
+					</div>
+
 				</div>
-				<div class="box box3">
-					<div class="jiantou1"><span class="iconfont icon-jiantou21"></span></div>
-					<div class="jiantou2"><span class="iconfont icon-jiantou22"></span></div>
-					<div class="con1">游戏</div>
-					<a href="http://js2.xoyo.com/?channel=bd">
-						<h3>剑侠世界2</h3>
-						<h4>潮流武侠，炫动江湖！</h4>
-						<img src="img/neirong3.jpg" width="216" height="154" class="imgbox1">
-					</a>
-					<div class="btns1">
-						<div class="son son1"></div>
-						<div class="son son2"><a href=""></a></div>
-						<div class="son son2"><a href=""></a></div>
-						<div class="son son2"><a href=""></a></div>
+				<div class="bo">
+					<h2>游戏</h2>
+					<div class="boxs" style="left:0px;">
+						<h3><a href="">剑侠世界2</a></h3>
+						<h4><a href="">潮流武侠，炫动江湖！</a></h4>
+						<h5></h5>
+						<a href="" class="imgbox"><img src="img/neirong4.jpg" alt="" width="216" height="154"></a>
 					</div>
+					<div class="boxs">
+						<h3><a href="">非人学院</a></h3>
+						<h4><a href="">脑洞大开的二次元竞技手游</a></h4>
+						<h5></h5>
+						<a href="" class="imgbox"><img src="img/neirong3.jpg" alt="" width="216" height="154"></a>
+					</div>
+					<div class="boxs">
+						<h3><a href="">小米超神</a></h3>
+						<h4><a href="">实力派，一起团！！</a></h4>
+						<h5></h5>
+						<a href="" class="imgbox"><img src="img/neirong2.jpg" alt="" width="216" height="154"></a>
+					</div>
+					<div class="boxs">
+						<h3><a href="">米柚手游模拟器</a></h3>
+						<h4><a href="">在电脑上玩遍小米所有手游</a></h4>
+						<h5>免费</h5>
+						<a href="" class="imgbox"><img src="img/neirong1.jpg" alt="" width="216" height="154"></a>
+					</div>
+
+					<a href="javascript:;" class="pre" style="z-index: 30;"><</a>
+					<a href="javascript:;" class="end" style="z-index: 30;">></a>
+					<div class="btns" style="z-index: 30;">
+						<a href="javascript:;" class="son  son1"></a>
+						<a href="javascript:;" class="son"></a>
+						<a href="javascript:;" class="son"></a>
+						<a href="javascript:;" class="son"></a>
+
+					</div>
+
 				</div>
-				<div class="box box4">
-					<div class="jiantou1"><span class="iconfont icon-jiantou21"></span></div>
-					<div class="jiantou2"><span class="iconfont icon-jiantou22"></span></div>
-					<div class="con1">应用</div>
-					<a href="http://app.mi.com/subject/169216">
-						<h3>2017金米奖</h3>
-						<h4>最优秀的应用和游戏</h4>
-						<img src="img/neirong4.jpg" width="216" height="154" class="imgbox1">
-					</a>
-					<div class="btns1">
-						<div class="son son1"></div>
-						<div class="son son2"><a href=""></a></div>
-						<div class="son son2"><a href=""></a></div>
-						<div class="son son2"><a href=""></a></div>
+				<div class="bo">
+					<h2>应用</h2>
+					<div class="boxs" style="left:0px;">
+						<h3><a href="">2017金米奖</a></h3>
+						<h4><a href="">最优秀的应用和游戏</a></h4>
+						<h5></h5>
+						<a href="" class="imgbox"><img src="img/neirong1.jpg" alt="" width="216" height="154"></a>
 					</div>
+					<div class="boxs">
+						<h3><a href="">Forest</a></h3>
+						<h4><a href="">帮助您专心于生活中每个重要时刻</a></h4>
+						<h5>免费</h5>
+						<a href="" class="imgbox"><img src="img/neirong4.jpg" alt="" width="216" height="154"></a>
+					</div>
+					<div class="boxs">
+						<h3><a href="">剑侠世界2</a></h3>
+						<h4><a href="">潮流武侠，炫动江湖！</a></h4>
+						<h5></h5>
+						<a href="" class="imgbox"><img src="img/neirong2.jpg" alt="" width="216" height="154"></a>
+					</div>
+					<div class="boxs">
+						<h3><a href="">小米应用</a></h3>
+						<h4><a href="">小米出品 必属精品</a></h4>
+						<h5>免费</h5>
+						<a href="" class="imgbox"><img src="img/neirong3.jpg" alt="" width="216" height="154"></a>
+					</div>
+
+					<a href="javascript:;" class="pre" style="z-index: 30;"><</a>
+					<a href="javascript:;" class="end" style="z-index: 30;">></a>
+					<div class="btns" style="z-index: 30;">
+						<a href="javascript:;" class="son  son1"></a>
+						<a href="javascript:;" class="son"></a>
+						<a href="javascript:;" class="son"></a>
+						<a href="javascript:;" class="son"></a>
+					</div>
+
 				</div>
 			</div>
 		</div>

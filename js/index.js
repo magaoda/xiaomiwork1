@@ -110,6 +110,9 @@ window.onload=function(){
     let a=zhuan.getElementsByTagName("a");
     let left=bigCon.getElementsByClassName("jiantou1")[0];
     let right=bigCon.getElementsByClassName("jiantou2")[0];
+    let btns=bigCon.getElementsByClassName("btns")[0];
+    let li=btns.getElementsByTagName("li");
+    console.log(li);
     console.log(a);
 
     let t=setInterval(move,1000);
@@ -121,8 +124,10 @@ window.onload=function(){
             }
             for(let i=0;i<a.length;i++){
                 a[i].style.zIndex=5;
+                li[i].className="";
             }
             a[num].style.zIndex=10;
+            li[num].className=" hot";
     }
     bigCon.onmouseenter=function () {
         clearInterval(t);
@@ -131,7 +136,7 @@ window.onload=function(){
        t=setInterval(move,1000);
     }
     right.onclick=function () {
-        move();
+        move1();
     }
     function move1() {
         num--;
@@ -140,10 +145,276 @@ window.onload=function(){
         }
         for(let j=0;j<a.length;j++){
             a[j].style.zIndex=5;
+            li[j].className="";
         }
         a[num].style.zIndex=10;
+        li[num].className="hot";
     }
     left.onclick=function () {
-        move1();
+        move();
     }
+    for(let x=0;x<li.length;x++){
+        li[x].onclick=function () {
+            for(let y=0;y<li.length;y++){
+                a[y].style.zIndex=5;
+                li[y].className="";
+            }
+            a[x].style.zIndex=10;
+            li[x].className="hot";
+            num=x;
+        }
+    }
+    // let neirong=document.querySelector(".neirong .con .box1 .list");
+    // let list=document.querySelectorAll(".list");
+    // let btns1=document.querySelectorAll(".btns1");
+    // console.log(list);
+    // let now=0;
+    // let next=0;
+    // let widths=parseInt(getComputedStyle(neirong,null).width);
+    // console.log(widths);
+    // setInterval(move,1000);
+    //  function move() {
+    //      next++;
+    //      if (next==list.length){
+    //          next=0;
+    //     }
+    //      list[next].style.left=widths+"px";
+    //     animate(list[now],{left:-widths});
+    //     animate(list[next],{left:0});
+    //     now=next;
+    //  }
+
+    let right1=document.querySelector(".right1");
+    let btn2=document.querySelectorAll(".more1 .btn2");
+    let time=0;
+    let rightsWidth=parseInt(getComputedStyle(right1,null).width)/3;
+    console.log(rightsWidth);
+    btn2[1].onclick=function () {
+        time++;
+        if(time==2){
+            time=1;
+        }
+        right1.style.transform = `translateX(${-rightsWidth*time}px)`;
+
+    }
+    btn2[0].onclick=function () {
+        time--;
+        if(time<0){
+            time=0;
+        }
+        right1.style.transform=`translateX(${-rightsWidth*time}px)`;
+
+    }
+
+    let con=document.querySelector(".nr .con");
+    let bo=con.querySelectorAll(".bo");
+
+    function lbt(obj){
+        let width=parseInt(getComputedStyle(obj,null).width);
+        let pre1=obj.querySelector(".pre");
+        let end1=obj.querySelector(".end");
+        let boxs=obj.querySelectorAll(".boxs");
+        let sons=obj.querySelectorAll(".son");
+        let flag=true;
+
+        /*let p=setInterval(move2,2000);
+
+        obj.onmouseenter=function(){
+            clearInterval(p);
+        }
+        obj.onmouseleave=function(){
+            p=setInterval(move2,2000);
+        }*/
+
+        let now=0;
+        let next=0;
+        function move2(){
+            next++;
+            if (next==boxs.length){
+                next=0;
+            }
+            for(let j=0;j<sons.length;j++){
+                sons[j].classList.remove("son1");
+            }
+            sons[next].classList.add("son1");
+            boxs[next].style.left=width+"px";
+            animate(boxs[now],{left:-width});
+            animate(boxs[next],{left:0},function(){
+                flag=true;
+            });
+            now=next;
+        }
+        function move3(){
+            next--;
+            if (next<0){
+                next=boxs.length-1;
+            }
+            for(let j=0;j<sons.length;j++){
+                sons[j].classList.remove("son1");
+            }
+            sons[next].classList.add("son1");
+            boxs[next].style.left=-width+"px";
+            animate(boxs[now],{left:width});
+            animate(boxs[next],{left:0},function(){
+                flag=true;
+            });
+            now=next;
+        }
+        pre1.onclick=function(){
+            if(flag==false){
+                return;
+            }
+
+            if(next==0){
+                return;
+            }
+            flag=false;
+            move3();
+        }
+        end1.onclick=function(){
+            if(flag==false){
+                return;
+            }
+            if(next==boxs.length-1){
+                return;
+            }
+            flag=false;
+            move2();
+        }
+
+        for (let k=0;k<sons.length;k++){
+            sons[k].onclick=function(){
+                if(k>now){
+                    for(let j=0;j<sons.length;j++){
+                        sons[j].classList.remove("son1");
+                    }
+                    sons[k].classList.add("son1");
+                    boxs[k].style.left=width+"px";
+                    animate(boxs[now],{left:-width});
+                    animate(boxs[k],{left:0});
+                    now=next=k;
+                }
+                else if(k<now){
+                    for(let j=0;j<sons.length;j++){
+                        sons[j].classList.remove("son1");
+                    }
+                    sons[k].classList.add("son1");
+                    boxs[k].style.left=-width+"px";
+                    animate(boxs[now],{left:width});
+                    animate(boxs[k],{left:0});
+                    now=next=k;
+                }
+                else{
+                    return;
+                }
+            }
+        }
+    }
+
+
+    bo.forEach(function(element){
+        lbt(element);
+    })
+    //
+    // let bigCon=document.querySelector(" .bigCon ");
+    // let lun=document.querySelectorAll(".lun");
+    // let left=bigCon.getElementsByClassName("jiantou1")[0];
+    // let right=bigCon.getElementsByClassName("jiantou2")[0];
+    // let btns=bigCon.getElementsByClassName("btns")[0];
+    // let li=btns.getElementsByTagName("li");
+    // console.log(bigCon,lun,li);
+    // let now=0;
+    // let next=0;
+    // let flag=true;
+    // let widths=parseInt(getComputedStyle(bigCon,null).width);
+    // console.log(widths);
+    // let t=setInterval(move,2000);
+    // function move() {
+    //     next++;
+    //     if (next==lun.length){
+    //         next=0;
+    //     }
+    //     // for(let i=0;i<li.length;i++){
+    //     //      li[i].className="";
+    //     // }
+    //     //  li[now].className="hot";
+    //     lun[next].style.left=-widths+"px";
+    //     animate(lun[now],{left:widths},function () {
+    //         flag=true;
+    //     });
+    //     animate(lun[next],{left:0});
+    //     li[next].classList.add("hot");
+    //     li[now].classList.remove("hot");
+    //     now=next;
+    // }
+    // bigCon.onmouseenter=function () {
+    //     clearInterval(t);
+    // }
+    // bigCon.onmouseleave=function () {
+    //     t=setInterval(move,1000);
+    // }
+    // left.onclick=function () {
+    //     if(flag==false){
+    //         return;
+    //     }
+    //     if(next==lun.length-1){
+    //         return;
+    //     }
+    //     flag=false;
+    //     move();
+    // }
+    // function move1() {
+    //     next--;
+    //     if(next<0){
+    //         next=lun.length-1;
+    //     }
+    //     // for(let x=0;x<li.length;x++){
+    //     //     li[x].className="";
+    //     // }
+    //     // li[now].className="hot";
+    //     lun[next].style.left=widths+"px";
+    //     animate(lun[now],{left:-widths},function () {
+    //         flag=true;
+    //     });
+    //     animate(lun[next],{left:0});
+    //     li[next].classList.add("hot");
+    //     li[now].classList.remove("hot");
+    //     now=next;
+    // }
+    // right.onclick=function () {
+    //     if(flag==false){
+    //         return;
+    //     }
+    //     if(next==0){
+    //         return;
+    //     }
+    //     flag=false;
+    //     move1();
+    // }
+    // for(let i=0;i<li.length;i++){
+    //     li[i].onclick=function () {
+    //         if (i > now) {
+    //             lun[i].style.left=-widths+"px";
+    //             animate(lun[now], {left: -widths});
+    //             animate(lun[i], {left: 0});
+    //             li[i].classList.add("hot");
+    //             li[now].classList.remove("hot");
+    //         }
+    //         if (i == now) {
+    //             return;
+    //         }
+    //         if (i < now) {
+    //             lun[i].style.left=widths+"px";
+    //             animate(lun[now], {left: widths});
+    //             animate(lun[i], {left: 0});
+    //             li[i].classList.add("hot");
+    //             li[now].classList.remove("hot");
+    //         }
+    //         now=next=i;
+    //     }
+    //
+    // }
+
+
+
 }
