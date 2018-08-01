@@ -201,7 +201,17 @@ img{
    width: 1226px;
    height: 100px;
    margin:0 auto;
+   position: relative;
 }
+.bigBox .logoBox input{
+  width: 198px;
+  height: 48px;
+  outline: none;
+  position: absolute;
+   margin-top: 25px;
+  right: 52px;
+  text-align: right;
+  }
 .bigBox .logoBox .logo{
    width: 55px;
    height: 55px;
@@ -306,8 +316,9 @@ img{
     text-align: center;
     font-size: 12px;
 }
+
 .bigBox .logoBox .nav2{
-   width: 260px;
+   width: 52px;
    height: 50px;
    border: 1px solid #759D9C;
    margin-top: 25px;
@@ -340,7 +351,8 @@ img{
    color: #fff;
    background-color: #ff6700;
 }
-.bigBox .logoBox .nav2 .son2 a{
+
+/* .bigBox .logoBox .nav2 .son2 a{
    display: block;
    width: 49px;
    height: 18px;
@@ -373,7 +385,7 @@ img{
    display: block;
    color: #fff;
    background-color: #ff6700;
-}
+} */
 .bigBox .site-header{
    width: 1877px;
    height: 100px;
@@ -590,20 +602,20 @@ img{
 .bigCon .asite{
    width: 234px;
    height: 460px;
-   background-color: black;
+   background-color: rgba(0, 0, 0, 0.6);
    position: absolute;
    left: 0;
    top: 0;
     z-index: 20;
+
 }
 .bigCon .asite .box{
    width: 234px;
    height: 420px;
-   background-color: black;
    position: relative;
    margin: 20px 0 20px; 
    z-index: 50;
-
+  
 }
 .bigCon .asite .box .son{
    width: 234px;
@@ -2510,17 +2522,37 @@ img{
     line-height: 58px;
     float: left;
 }
-.tuijian .more{
-    width: 72px;
-   height: 58px;
+.tuijian .mores{
+    width: 70px;
+    height: 25px;
     float: right;
+    transition: all 1s;
+    margin-top: 15px;
 }
-.tuijian .more .more1{
-    margin: 17px 0 17px;
+.tuijian .more2 .btn3{
+    width: 35px;
+    height: 25px;
+    background-color: #fff;
+    border: 1px solid #b0b0b0;
+    text-align: center;
+    box-sizing: border-box;
+    cursor: pointer;
+    float: left;
+    font-size: 18px;
+    color: #B0B3BE;
 }
 .tuijian .con{
-   width: 100%;
+   width: 1226px;
    height: 314px;
+   position: relative;
+   overflow: hidden;
+
+}
+.tuijian .con .cons{
+  width: 4960px;
+  height: 314px;
+  position: absolute;
+  transition: all 1s;
 }
 .tuijian .con .box{
    text-align: center;

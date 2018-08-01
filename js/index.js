@@ -2,9 +2,10 @@
 * @Author: 75497
 * @Date:   2018-07-20 13:33:18
 * @Last Modified by:   75497
-* @Last Modified time: 2018-07-20 18:18:42
+* @Last Modified time: 2018-08-01 18:57:09
 */
 window.onload=function() {
+    
     let shop = document.getElementsByClassName("shop")[0];
     let car = document.getElementsByClassName("car")[0];
     console.log(shop, car);
@@ -453,14 +454,14 @@ window.onload=function() {
         }
         arr.push(hour);
 
-        let minuth = Math.floor(sj % ( 60));
+        let minuth = Math.floor(sj /( 60));
         sj = sj % (60 * 60);
         if(minuth>=0 && minuth<=9){
             minuth="0"+minuth;
         }
         arr.push(minuth);
 
-        let ss = Math.floor(sj / 60);
+        let ss = Math.floor(sj % 60);
         sj = sj % 60;
         if(ss>=0 && ss<=9){
             ss="0"+ss;
@@ -468,6 +469,28 @@ window.onload=function() {
         arr.push(ss);
 
         return arr;
+    }
+
+    let cons = document.querySelector(".cons");
+    let btn3 = document.querySelectorAll(".more2 .btn3");
+    let time1 = 0;
+    let conWidth = parseInt(getComputedStyle(cons, null).width) / 4;
+    console.log(conWidth);
+    btn3[1].onclick = function () {
+        time1++;
+        if (time1 == 4) {
+            time1=3;
+        }
+        cons.style.transform = `translateX(${-conWidth * time1}px)`;
+
+    }
+    btn3[0].onclick = function () {
+        time1--;
+        if (time1 < 0) {
+            time1 = 0;
+        }
+        cons.style.transform = `translateX(${-conWidth * time1}px)`;
+
     }
 
 }
