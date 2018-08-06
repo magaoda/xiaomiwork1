@@ -20,6 +20,27 @@ window.onload=function() {
         car.style.lineHeight = "none";
     }
 
+    let sou=document.querySelector(".sou");
+    let son11=document.querySelector(".son11");
+    let input=document.querySelector("input");
+    let son12=document.querySelector(".son12");
+    let son13=document.querySelector(".son13");
+    let ss=document.querySelector(".ss");
+    input.onfocus=function(){
+        sou.style.borderColor="#FF6701";
+        son11.style.borderColor="#FF6701";
+        son12.style.display="none";
+        son13.style.display="none";
+        ss.style.display="block";
+    }
+    input.onblur=function(){
+        sou.style.borderColor="#E0E0E0";
+        son11.style.borderColor="#E0E0E0";
+        son12.style.display="block";
+        son13.style.display="block";
+        ss.style.display="none";
+    }
+
     let bigBox = document.getElementsByClassName("bigBox")[0];
     let logoBox = bigBox.getElementsByClassName("logoBox")[0];
     let nav1 = logoBox.getElementsByClassName("nav1")[0];
