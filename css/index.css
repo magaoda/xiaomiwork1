@@ -910,7 +910,11 @@ img{
     cursor: pointer;
     float: left;
     font-size: 18px;
-    color: #B0B3BE;
+    color: #CDA6A4;
+}
+.more .btn2:hover{
+    opacity: 0.8;
+    color: #e0e0e0;
 }
 /*.shangou .more .more1{*/
     /*margin: 17px 0 17px;*/

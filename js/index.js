@@ -504,6 +504,7 @@ window.onload=function() {
         }
         cons.style.transform = `translateX(${-conWidth * time1}px)`;
 
+
     }
     btn3[0].onclick = function () {
         time1--;
