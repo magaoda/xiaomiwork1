@@ -50,16 +50,16 @@ window.onload=function() {
     for (let i = 0; i < xia.length - 2; i++) {
         xia[i].onmouseenter = function () {
             for (let j = 0; j < xia.length - 2; j++) {
-                logoCon[j].style.display = "none";
+                // logoCon[j].style.display = "none";
             }
-            logoCon[i].style.display = "block";
+            // logoCon[i].style.display = "block";
             logoCon[i].style.height = "230px";
             logoCon[i].style.background = "#fff";
             logoCon[i].style.borderTop = "1px solid #E0E0E0";
             logoCon[i].style.boxShadow = "0 7px 6px rgba(0,0,0,0.2)";
         }
         xia[i].onmouseleave = function () {
-            logoCon[i].style.display = "none";
+            // logoCon[i].style.display = "none";
             logoCon[i].style.height = 0;
             logoCon[i].style.background = "none";
             logoCon[i].style.boxShadow = "none";
@@ -458,7 +458,7 @@ window.onload=function() {
     function js() {
         let arr=[];
         let now = new Date();
-        let future = new Date(2018,6,27,18);
+        let future = new Date(2018,7,10,18);
         let sj = Math.floor(future.getTime() - now.getTime())/1000;
         // let month = Math.floor(sj / (30 * 24 * 60 * 60));
         // sj = sj % (30 * 24 * 60 * 60);
@@ -467,7 +467,7 @@ window.onload=function() {
         // let day = Math.floor(sj / (24 * 60 * 60));
         // sj = sj % (24 * 60 * 60);
         // arr.push(day);
-
+       
         let hour = Math.floor(sj / (60 * 60));
         sj = sj % (60 * 60);
         if(hour>=0 && hour<=9){
