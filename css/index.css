@@ -40,7 +40,7 @@ img{
    width: 1226px;
    height: 40px;
    margin: 0 auto;
-   position: relative;
+   /* position: relative; */
    top: 0;
    left: 0;
     z-index: 90;
@@ -90,6 +90,7 @@ img{
    font-size: 14px;
    text-align: center;
    line-height: 40px;
+   position: relative;
    background-color:#424242;
    float: right;
 }
@@ -99,6 +100,7 @@ img{
    height: 40px;
    font-size: 14px;
    text-align: center;
+   
    line-height: 40px;
    background-color:#424242;
 }
@@ -111,6 +113,12 @@ img{
    /* overflow: visible; */
 
 }
+.header .nav .shop:hover a{
+    color: #ff6700;
+    background-color: #fff;
+    /* overflow: visible; */
+ 
+ }
 .header .nav .shop .car{
    width: 316px;
     height: 0;
@@ -119,6 +127,7 @@ img{
    top: 40px;
    right: 0;
    transition:all 0.3s;
+   z-index: 99;
     overflow: hidden;
 }
 /* .header .nav .shop a .son{
@@ -246,32 +255,40 @@ img{
    margin-top: 23px;
 }
 .bigBox .logoBox .nav1{
-   width: 650px;
+   /* width: 650px;
    height: 100px;
-   
+   float: left;
    margin-left: 180px;
    display: flex;
    justify-content: space-between;
+   float: left; */
    float: left;
+	width: 720px;
+	height: 88px;
+	padding: 12px 0 0 170px;
+	font-size: 16px;
 }
  .nav1 .xia{
-    width: auto;
-    height: 0;
-    font-size: 16px;
-   text-align: left;
-   line-height: 100px;
+    float: left;
 }
-.bigBox .logoBox .nav1 a{
+.bigBox .logoBox .xia span{
    display: block;
-   width: auto;
-   height: 100px;
-    text-align: center;
-
+   padding: 26px 10px 38px;
    color: #333;
 }
-.bigBox .logoBox .nav1 a:hover{
+.bigBox .logoBox .nav1 span:hover{
    color: #ff6700;
+   cursor: pointer;
 }
+.bigBox .logoBox .xia .link{
+    display: block;
+    padding: 26px 10px 38px;
+    color: #333;
+ }
+ .bigBox .logoBox .nav1 .link:hover{
+    color: #ff6700;
+    cursor: pointer;
+ }
 .bigBox  .logoCon{
     width: 100%;
     height: 0;
@@ -314,6 +331,7 @@ img{
     margin: 0 auto 16px;
     line-height: 20px;
 }
+
 .logoCon .container .first p{
     line-height: 20px;
     color: #ff6700;
@@ -630,6 +648,7 @@ img{
    position: relative;
    left: 0;
    top: 0;
+   overflow: hidden;
 }
 .bigCon .wraper{
    width: 100%;
@@ -909,8 +928,14 @@ img{
     box-sizing: border-box;
     cursor: pointer;
     float: left;
-    font-size: 18px;
-    color: #CDA6A4;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 600;
+    color: #b0b0b0;
+    /* color: #CDA6A4; */
+}
+.shangou .more .btn2:first-child{
+   margin-right: -1px;
 }
 .more .btn2:hover{
     opacity: 0.8;
@@ -2593,9 +2618,14 @@ img{
     box-sizing: border-box;
     cursor: pointer;
     float: left;
-    font-size: 18px;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 600;
     color: #B0B3BE;
 }
+.tuijian .more2 .btn3:first-child{
+    margin-right: -1px;
+ }
 .more2 .btn3:hover{
     opacity: 0.8;
     color: #e0e0e0;
